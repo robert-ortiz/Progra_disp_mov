@@ -1,9 +1,9 @@
-package com.calyrsoft.ucbp1.presentation
+package com.calyrsoft.ucbp1.features.github.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.calyrsoft.ucbp1.domain.model.UserModel
-import com.calyrsoft.ucbp1.domain.usecase.FindByNickNameUseCase
+import com.calyrsoft.ucbp1.features.github.domain.model.UserModel
+import com.calyrsoft.ucbp1.features.github.domain.usecase.FindByNickNameUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
