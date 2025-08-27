@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.calyrsoft.ucbp1.features.github.presentation.GithubScreen
+import com.calyrsoft.ucbp1.features.profile.application.ProfileScreen
 
 @Composable
 fun AppNavigation() {
@@ -14,7 +15,7 @@ fun AppNavigation() {
 
     NavHost(
         navController = navController,
-        startDestination = Screen.Github.route
+        startDestination = Screen.Profile.route
     ) {
         composable(Screen.Github.route) {
             GithubScreen(modifier = Modifier)
@@ -23,7 +24,7 @@ fun AppNavigation() {
 
         }
         composable(Screen.Profile.route) {
-
+            ProfileScreen()
         }
     }
 }
