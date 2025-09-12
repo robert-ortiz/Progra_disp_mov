@@ -1,5 +1,9 @@
 package com.calyrsoft.ucbp1.di
 
+import com.calyrsoft.ucbp1.features.dollar.data.repository.DollarRepository
+import com.calyrsoft.ucbp1.features.dollar.domain.repository.IDollarRepository
+import com.calyrsoft.ucbp1.features.dollar.domain.usecase.FetchDollarUseCase
+import com.calyrsoft.ucbp1.features.dollar.presentation.DollarViewModel
 import com.calyrsoft.ucbp1.features.github.data.api.GithubService
 import com.calyrsoft.ucbp1.features.github.data.datasource.GithubRemoteDataSource
 import com.calyrsoft.ucbp1.features.github.data.repository.GithubRepository
@@ -51,6 +55,10 @@ val appModule = module {
     single<IProfileRepository> { ProfileRepository() }
     factory { GetProfileUseCase(get()) }
     viewModel { ProfileViewModel(get()) }
+
+    single<IDollarRepository> { DollarRepository() }
+    factory { FetchDollarUseCase(get()) }
+    viewModel{ DollarViewModel(get()) }
 
 
 
