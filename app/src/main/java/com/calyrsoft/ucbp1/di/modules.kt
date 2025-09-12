@@ -1,6 +1,7 @@
 package com.calyrsoft.ucbp1.di
 
 import com.calyrsoft.ucbp1.features.dollar.data.repository.DollarRepository
+import com.calyrsoft.ucbp1.features.dollar.datasource.RealTimeRemoteDataSource
 import com.calyrsoft.ucbp1.features.dollar.domain.repository.IDollarRepository
 import com.calyrsoft.ucbp1.features.dollar.domain.usecase.FetchDollarUseCase
 import com.calyrsoft.ucbp1.features.dollar.presentation.DollarViewModel
@@ -56,7 +57,8 @@ val appModule = module {
     factory { GetProfileUseCase(get()) }
     viewModel { ProfileViewModel(get()) }
 
-    single<IDollarRepository> { DollarRepository() }
+    single { RealTimeRemoteDataSource() }
+    single<IDollarRepository> { DollarRepository(get()) }
     factory { FetchDollarUseCase(get()) }
     viewModel{ DollarViewModel(get()) }
 
