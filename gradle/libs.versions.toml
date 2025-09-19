@@ -19,6 +19,7 @@ googleGmsGoogleServices = "4.4.3"
 firebaseDatabase = "22.0.0"
 ksp = "2.0.20-1.0.24"
 room = "2.8.0"
+datastore = "1.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -44,7 +45,7 @@ koin-androidx-navigation = { module = "io.insert-koin:koin-androidx-navigation",
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navcompose"}
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
-
+datastore = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore"}
 #room
 room-runtime = { group="androidx.room", name="room-runtime", version.ref="room"}
 room-compiler = { group="androidx.room", name="room-compiler", version.ref="room"}
