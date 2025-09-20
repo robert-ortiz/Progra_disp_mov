@@ -77,4 +77,8 @@ dependencies {
 
     implementation(libs.datastore)
 
+    testImplementation(libs.mockk)
+    testImplementation(libs.kotlinx.coroutines.test)
+
+
 }
