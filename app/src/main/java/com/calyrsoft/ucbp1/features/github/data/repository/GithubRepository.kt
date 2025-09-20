@@ -3,6 +3,7 @@ package com.calyrsoft.ucbp1.features.github.data.repository
 import com.calyrsoft.ucbp1.features.github.data.datasource.GithubRemoteDataSource
 import com.calyrsoft.ucbp1.features.github.data.error.DataException
 import com.calyrsoft.ucbp1.features.github.domain.error.Failure
+import com.calyrsoft.ucbp1.features.github.domain.model.UrlPath
 import com.calyrsoft.ucbp1.features.github.domain.model.UserModel
 import com.calyrsoft.ucbp1.features.github.domain.repository.IGithubRepository
 
@@ -17,11 +18,7 @@ class GithubRepository(
 
         response.fold(
             onSuccess = {
-                it ->
-                return Result.success(UserModel(
-                    nickname = it.login,
-                    pathUrl = it.url
-                ))
+                return Result.success(it)
             },
             onFailure = { exception ->
                 val failure = when (exception) {
