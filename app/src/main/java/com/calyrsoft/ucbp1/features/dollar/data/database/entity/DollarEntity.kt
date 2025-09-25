@@ -22,5 +22,7 @@ data class DollarEntity(
     var dollarUSDT: String? = null,
 
     @ColumnInfo(name = "dollar_usdc")
-    var dollarUSDC: String? = null
+    var dollarUSDC: String? = null,
+
+
 )
