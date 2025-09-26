@@ -106,8 +106,6 @@ fun DollarRateCard(title: String, rate: String?, color: Color) {
 
 
 private fun formatTimestamp(timestamp: Long): String {
-    if (timestamp <= 0) return "N/A"
-
     val date = Date(timestamp)
     val formatter = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
     return formatter.format(date)
